@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flightrecording>
+    <name>CustomProfile</name>
+    <description>Custom JFR Profile for capturing method invocations and GC events</description>
+
+    <!-- Enable method profiling with no threshold -->
+    <event name="jdk.MethodProfilingSample" enabled="true" threshold="0 ms"/>
+
+    <!-- Enable execution sampling with a 1ms period -->
+    <event name="jdk.ExecutionSample" enabled="true" period="1 ms"/>
+
+    <!-- Enable garbage collection event capture -->
+    <event name="jdk.GarbageCollection" enabled="true"/>
+</flightrecording>
